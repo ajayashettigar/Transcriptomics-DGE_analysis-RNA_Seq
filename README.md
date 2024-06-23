@@ -29,7 +29,7 @@ All the raw data used in this experiment were downloaded from the [ENA Browser](
 ### Differential Gene Expression Analysis
 
 - **Analysis Tools**: Differential gene expression analysis was performed using Cuffdiff v2.2.1. Significant genes were identified based on a p-value < 0.005.
-- **Pathway Enrichment**: Enrichment analysis was conducted using DAVID and ShinyGO 0.8. Pathways with an enrichment score greater than 4 were selected for further interpretation.
+- **Pathway Enrichment**: Enrichment analysis was conducted using DAVID and ShinyGO 0.8. Pathways with an enrichment score greater than 4 were selected for further interpretation. Details are provided in these respective files: - [/]
 
 ## Results
 
