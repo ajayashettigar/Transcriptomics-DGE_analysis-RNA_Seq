@@ -1,0 +1,27 @@
+Category,Term,Count,%,PValue,Genes,List Total,Pop Hits,Pop Total,Fold Enrichment,Bonferroni,Benjamini,FDR
+GOTERM_CC_DIRECT,GO:0005789~endoplasmic reticulum membrane,8,20,0.003770823,"ENSG00000183160, ENSG00000103429, ENSG00000213676, ENSG00000118705, ENSG00000103415, ENSG00000079459, ENSG00000075790, ENSG00000155974",38,1138,20521,3.796318564,0.324908338,0.392165544,0.392165544
+KEGG_PATHWAY,hsa04714:Thermogenesis,4,10,0.005547971,"ENSG00000146592, ENSG00000109819, ENSG00000184009, ENSG00000140740",15,232,8662,9.956321839,0.413796404,0.280545643,0.280545643
+KEGG_PATHWAY,hsa04918:Thyroid hormone synthesis,3,7.5,0.006293312,"ENSG00000165409, ENSG00000213676, ENSG00000146592",15,75,8662,23.09866667,0.45450796,0.280545643,0.280545643
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+Individual Gene information under the pathways,,,,,,,,,,,,
+ID,Gene Name,Species,,,,,,,,,,
+ENSG00000075790,B cell receptor associated protein 29(BCAP29),Homo sapiens,,,,,,,,,,
+ENSG00000213676,activating transcription factor 6 beta(ATF6B),Homo sapiens,,,,,,,,,,
+ENSG00000103429,bifunctional apoptosis regulator(BFAR),Homo sapiens,,,,,,,,,,
+ENSG00000079459,farnesyl-diphosphate farnesyltransferase 1(FDFT1),Homo sapiens,,,,,,,,,,
+ENSG00000155974,glutamate receptor interacting protein 1(GRIP1),Homo sapiens,,,,,,,,,,
+ENSG00000103415,heme oxygenase 2(HMOX2),Homo sapiens,,,,,,,,,,
+ENSG00000118705,ribophorin II(RPN2),Homo sapiens,,,,,,,,,,
+ENSG00000183160,transmembrane protein 119(TMEM119),Homo sapiens,,,,,,,,,,
+,,,,,,,,,,,,
+ID,Gene Name,Species,,,,,,,,,,
+ENSG00000109819,PPARG coactivator 1 alpha(PPARGC1A),Homo sapiens,,,,,,,,,,
+ENSG00000184009,actin gamma 1(ACTG1),Homo sapiens,,,,,,,,,,
+ENSG00000146592,cAMP responsive element binding protein 5(CREB5),Homo sapiens,,,,,,,,,,
+ENSG00000140740,ubiquinol-cytochrome c reductase core protein 2(UQCRC2),Homo sapiens,,,,,,,,,,
+,,,,,,,,,,,,
+ID,Gene Name,Species,,,,,,,,,,
+ENSG00000213676,activating transcription factor 6 beta(ATF6B),Homo sapiens,,,,,,,,,,
+ENSG00000146592,cAMP responsive element binding protein 5(CREB5),Homo sapiens,,,,,,,,,,
+ENSG00000165409,thyroid stimulating hormone receptor(TSHR),Homo sapiens,,,,,,,,,,
