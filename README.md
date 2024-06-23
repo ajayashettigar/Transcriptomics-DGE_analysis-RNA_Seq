@@ -40,7 +40,7 @@ All the raw data used in this experiment were downloaded from the [ENA Browser](
 
 ## Acknowledgements
 
-I would like to express my deepest gratitude to my advisor, Ms. Shilpa Rathode, for their unwavering support, guidance, and encouragement throughout the course of this research. I am immensely grateful to the Mediomix Diagnosis and Bioresearch Centre for providing me with the opportunity to conduct my research in their facility. Special thanks to my lab colleagues, friends, and family for their support. I also extend my gratitude to the NCBI-GEO database for providing the datasets used in this study.
+I would like to express my deepest gratitude to my advisor, [Ms. Shilpa Rathod](https://github.com/ShilpaRathod-BIO), for their unwavering support, guidance, and encouragement throughout the course of this research. I am immensely grateful to the Mediomix Diagnosis and Bioresearch Centre for providing me with the opportunity to conduct my research in their facility. Special thanks to my lab colleagues, friends, and family for their support. I also extend my gratitude to the NCBI-GEO database for providing the datasets used in this study.
 
 ## How to Use
 
