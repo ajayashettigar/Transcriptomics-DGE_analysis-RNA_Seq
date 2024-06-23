@@ -1,7 +1,7 @@
 ####Step1-Preprocessing####
 
 ##FASTQC##
-
+# all my raw data is present in the folder named "Raw_Data" edit this command accordingly
 mkdir -p Raw_Data/fastqc_report 
 fastqc Raw_Data/*.fastq.gz -o Raw_Data/fastqc_report
 
