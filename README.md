@@ -1,3 +1,9 @@
 # Transcriptomics: DEGs Induced by Betel Nut Chewing and Their Links to Type 2 Diabetes & Obesity
 ## Abstract
 Betel nut chewing is the fourth most common addictive habit in the world. People who are addicted with this habit are prone to Type 2 Diabetes(T2D) and Obesity. This project is mainly focused on finding out the possible genes that are included during the for T2D and Obesity through a transcriptomics approach. The datasets used for this project were taken from an existing project in the GEO database, where human monocyte cell lines were incubated in Arecoline and MNPA, which are products from Betel nut thought to be associated with T2D and Obesity. I have attempted to recreate the transcriptomics findings using my own analysis pipeline and generated output. At the conclusion of the analysis, genes and their associated metabolic pathways were identified that have the potential to contribute to the development of type 2 diabetes and obesity. The analysis revealed that various metabolic pathways were found to be altered due to the genes that were identified as having potential to cause these conditions.
+
+## Dataset
+This transcriptomics study builds upon an existing project titled "Areca catechu (Betel-nut)-induced whole transcriptome changes in a human monocyte cell line that may have relevance to diabetes and obesity; a pilot study" by Shirleny R. Cardosa, B. William Ogunkolade, Rob Lowe, Emanuel Savage, Charles A. Mein, Barbara J. Boucher, and Graham A. Hitman. The original study is accessible through [BMC Endocrine Disorders](https://bmcendocrdisord.biomedcentral.com/articles/10.1186/s12902-021-00827-1) with DOI:10.1186/s12902-021-00827-1. The raw data from this research are available in the GEO database of NCBI under the accession ID: GSE179143.
+
+## SRA Data
+All the raw data used for this project is included in [Raw_data]()
