@@ -29,14 +29,14 @@ All the raw data used in this experiment were downloaded from the [ENA Browser](
 ### Differential Gene Expression Analysis
 
 - **Analysis Tools**: Differential gene expression analysis was performed using Cuffdiff v2.2.1. Significant genes were identified based on a p-value < 0.005.
-- **Pathway Enrichment**: Enrichment analysis was conducted using DAVID and ShinyGO 0.8. Pathways with an enrichment score greater than 4 were selected for further interpretation. Details are provided in these respective files: - [/]
-
+- **Pathway Enrichment**: Enrichment analysis was conducted using DAVID and ShinyGO 0.8. Pathways with an enrichment score greater than 4 were selected for further interpretation. 
+## Sample bash script to run the above analysis is provided in [`Transcriptomics.sh`](/Transcriptomics.sh) 
 ## Results
 
 ### Key Findings
 
 - **Significant Genes**: The Cuffdiff analysis identified 42 significant genes, with key genes including WDR73, GPATCH4, ATF6B, and others.
-- **Pathway Enrichment**: Pathways related to endoplasmic reticulum membrane, thermogenesis, and thyroid hormone synthesis were significantly enriched.
+- **Pathway Enrichment**: Pathways related to endoplasmic reticulum membrane, thermogenesis, and thyroid hormone synthesis were significantly enriched. Details are provided in these respective files: - You can find the enrichment results in the [`David_enrichment.csv`](/David_enrichment.csv) & [`Shiny_enrichment.csv`](/Shiny_enrichment.csv) files.
 
 ## Acknowledgements
 
