@@ -58,7 +58,3 @@ samtools view -b Alignments/SRR14995019.sam | samtools sort -o Alignments/SRR149
 
 ##cuffdidd output report
 cuffdiff --no-update-check GTF/genetranscript.gtf Alignments/SRR14995014.bam,Alignments/SRR14995015.bam,Alignments/SRR14995016.bam Alignments/SRR14995017.bam,Alignments/SRR14995018.bam,Alignments/SRR14995019.bam  -o cuffdiff_output
-
-#linux codes
-#txt to tsv conversion
-awk '{gsub(/\t+/, "\t"); print}' david_clust.txt > david_clust.tsv
