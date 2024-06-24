@@ -30,7 +30,7 @@ All the raw data used in this experiment were downloaded from the [ENA Browser](
 
 - **Analysis Tools**: Differential gene expression analysis was performed using Cuffdiff v2.2.1. Significant genes were identified based on a p-value < 0.005.
 - **Pathway Enrichment**: Enrichment analysis was conducted using DAVID and ShinyGO 0.8. Pathways with an enrichment score greater than 4 were selected for further interpretation. 
-## Sample bash script to run the above analysis is provided in [`Transcriptomics.sh`](/Transcriptomics_Script.sh) 
+## Sample bash script to run the above analysis is provided in [`Transcriptomics_Script.sh`](/Transcriptomics_Script.sh) 
 ## Results
 
 ### Key Findings
