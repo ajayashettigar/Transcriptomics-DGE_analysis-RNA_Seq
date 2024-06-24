@@ -16,7 +16,7 @@ This project investigates the whole transcriptome changes induced by Betel nut (
 
 ## Data Sources
 
-All the raw data used in this experiment were downloaded from the [ENA Browser](https://www.ebi.ac.uk/ena/browser/home) using the SRR IDs provided in the SRA run selector, which can be found in the GEO data of this experiment. The datasets are accessible under the GEO accession number GSE179143. The gene transcript file for the Cuffdiff tool is the GTF file obtained from the [Ensembl](https://ftp.ensembl.org/pub/release-112/gtf/homo_sapiens/Homo_sapiens.GRCh38.112.gtf.gz) database.
+All the raw data used in this experiment were downloaded from the [`ENA Browser`](https://www.ebi.ac.uk/ena/browser/home) using the SRR IDs provided in the SRA run selector, which can be found in the GEO data of this experiment. The datasets are accessible under the GEO accession number GSE179143. The gene transcript file for the Cuffdiff tool is the GTF file obtained from the [`Ensembl`](https://ftp.ensembl.org/pub/release-112/gtf/homo_sapiens/Homo_sapiens.GRCh38.112.gtf.gz) database.
 
 ## Methodology
 
