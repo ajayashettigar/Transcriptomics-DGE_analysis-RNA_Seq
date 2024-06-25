@@ -1,7 +1,7 @@
 ####Step1-Preprocessing####
 
 ##FASTQC##
-# all my raw data is present in the folder named "Raw_Data" edit this command accordingly
+
 mkdir -p Raw_Data/fastqc_report 
 fastqc Raw_Data/*.fastq.gz -o Raw_Data/fastqc_report
 
@@ -10,17 +10,14 @@ multiqc Raw_Data/fastqc_report -o Raw_Data/multiqc
 ##FASTP##
 mkdir -p fastp_out
 
-fastp -i Raw_Data/SRR14995014_1.fastq -I Raw_Data/SRR14995014_2.fastq -o fastp_out/SRR14995014_1.fastq -O fastp_out/SRR14995014_2.fastq
+# Define an array of file prefixes i.e SRR IDs of your data
+declare -a FILES=("SRR14995014" "SRR14995015" "SRR14995016" "SRR14995017" "SRR14995018" "SRR14995019")
 
-fastp -i Raw_Data/SRR14995015_1.fastq -I Raw_Data/SRR14995015_2.fastq -o fastp_out/SRR14995015_1.fastq -O fastp_out/SRR14995015_2.fastq
-
-fastp -i Raw_Data/SRR14995016_1.fastq -I Raw_Data/SRR14995016_2.fastq -o fastp_out/SRR14995016_1.fastq -O fastp_out/SRR14995016_2.fastq
-
-fastp -i Raw_Data/SRR14995017_1.fastq -I Raw_Data/SRR14995017_2.fastq -o fastp_out/SRR14995017_1.fastq -O fastp_out/SRR14995017_2.fastq
-
-fastp -i Raw_Data/SRR14995018_1.fastq -I Raw_Data/SRR14995018_2.fastq -o fastp_out/SRR14995018_1.fastq -O fastp_out/SRR14995018_2.fastq
-
-fastp -i Raw_Data/SRR14995019_1.fastq -I Raw_Data/SRR14995019_2.fastq -o fastp_out/SRR14995019_1.fastq -O fastp_out/SRR14995019_2.fastq
+# Iterate over each file prefix and run fastp
+for ((i=0; i<${#FILES[@]}; i++)); do
+    file=${FILES[$i]}
+    fastp -i Raw_Data/${file}_1.fastq -I Raw_Data/${file}_2.fastq -o fastp_out/${file}_1.fastq -O fastp_out/${file}_2.fastq
+done
 
 ##FASTQC##
 mkdir -p fastp_out/fastqc_report
@@ -36,25 +33,19 @@ hisat2-build Reference/reference.fa Reference/reference.fa
 ##ALIGNMENT##
 mkdir -p Alignments
 
-hisat2 -x Reference/reference.fa -1 fastp_out/SRR14995014_1.fastq -2 fastp_out/SRR14995014_2.fastq --dta-cufflinks -S Alignments/SRR14995014.sam
-
-hisat2 -x Reference/reference.fa -1 fastp_out/SRR14995015_1.fastq -2 fastp_out/SRR14995015_2.fastq --dta-cufflinks -S Alignments/SRR14995015.sam
-
-hisat2 -x Reference/reference.fa -1 fastp_out/SRR14995016_1.fastq -2 fastp_out/SRR14995016_2.fastq --dta-cufflinks -S Alignments/SRR14995016.sam
-
-hisat2 -x Reference/reference.fa -1 fastp_out/SRR14995017_1.fastq -2 fastp_out/SRR14995017_2.fastq --dta-cufflinks -S Alignments/SRR14995017.sam
-
-hisat2 -x Reference/reference.fa -1 fastp_out/SRR14995018_1.fastq -2 fastp_out/SRR14995018_2.fastq --dta-cufflinks -S Alignments/SRR14995018.sam
-
-hisat2 -x Reference/reference.fa -1 fastp_out/SRR14995019_1.fastq -2 fastp_out/SRR14995019_2.fastq --dta-cufflinks -S Alignments/SRR14995019.sam
+# Iterate over a sequence of numbers and generate file names
+for i in {14..19}
+do
+    file="SRR149950${i}"
+    hisat2 -x Reference/reference.fa -1 fastp_out/${file}_1.fastq -2 fastp_out/${file}_2.fastq --dta-cufflinks -S Alignments/${file}.sam
+done
 
 ##SAMtoBAM and SORT BAM##
-samtools view -b Alignments/SRR14995014.sam | samtools sort -o Alignments/SRR14995014.bam
-samtools view -b Alignments/SRR14995015.sam | samtools sort -o Alignments/SRR14995015.bam
-samtools view -b Alignments/SRR14995016.sam | samtools sort -o Alignments/SRR14995016.bam
-samtools view -b Alignments/SRR14995017.sam | samtools sort -o Alignments/SRR14995017.bam
-samtools view -b Alignments/SRR14995018.sam | samtools sort -o Alignments/SRR14995018.bam
-samtools view -b Alignments/SRR14995019.sam | samtools sort -o Alignments/SRR14995019.bam
+# Iterate over a sequence of numbers and generate file names
+for i in {14..19}; do
+    file=$(printf "SRR149950%02d" $i)
+    samtools view -b Alignments/${file}.sam | samtools sort -o Alignments/${file}.bam
+done
 
 ##cuffdidd output report
 cuffdiff --no-update-check GTF/genetranscript.gtf Alignments/SRR14995014.bam,Alignments/SRR14995015.bam,Alignments/SRR14995016.bam Alignments/SRR14995017.bam,Alignments/SRR14995018.bam,Alignments/SRR14995019.bam  -o cuffdiff_output
