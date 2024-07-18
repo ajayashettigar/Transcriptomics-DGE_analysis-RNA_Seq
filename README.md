@@ -1,4 +1,4 @@
-# Transcriptomics: DEGs Induced by Betel Nut Chewing and Their Links to Type 2 Diabetes & Obesity
+# Transcriptomics: DGEs Induced by Betel Nut Chewing and Their Links to Type 2 Diabetes & Obesity
 
 ## Project Overview
 
